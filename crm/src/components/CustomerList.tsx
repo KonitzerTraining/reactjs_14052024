@@ -13,6 +13,14 @@ function CustomerList() {
         });        
     }
 
+    const deleteCustomer = (id: number) => {
+        console.log(id);
+        customerService.deleteById(id).then(() => {
+            console.log('Datensatz gelöscht');
+            loadCustomers();
+        })
+    }
+
     useEffect(() => {
         loadCustomers();
     }, []);
@@ -26,12 +34,14 @@ function CustomerList() {
             {
                 customers.map((el: Customer) => {
                     return (
-                        <li key={el.id}>{el.name}</li>
+                        <li key={el.id}>{el.name} <button onClick={() => {
+                            deleteCustomer(el.id);
+                        }}>Delete</button></li>
                     )
                 })
             }
             </ul>
         </>
-    )
+    ) 
 }
 export default CustomerList;

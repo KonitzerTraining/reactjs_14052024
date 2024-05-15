@@ -8,4 +8,9 @@ export const customerService = {
         const response = await fetch(url)
         return response.json();
     },
+
+    async deleteById(id: number) {
+        const response = await fetch(url + '/' + id, { method: 'DELETE' })
+        return response.json();
+    },
 };
