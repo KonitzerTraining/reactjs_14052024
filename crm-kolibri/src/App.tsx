@@ -12,10 +12,10 @@ function App() {
   return (
     <BrowserRouter>
       <MainNavigation />
-      
+
       <Routes>
         <Route path="/" element={<StartPage />} />
-        <Route path="/dashboard" element={<CustomerIndex />} />
+        <Route path="/dashboard//*" element={<CustomerIndex />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/help" element={<HelpIndex />} />
 
