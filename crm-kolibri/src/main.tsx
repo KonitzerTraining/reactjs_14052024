@@ -7,10 +7,10 @@ import { register } from "@public-ui/components";
 import { defineCustomElements } from "@public-ui/components/dist/loader";
 
 // @ts-expect-error
-import { ITZBund } from "@public-ui/themes";
+import { DEFAULT } from "@public-ui/themes";
 import { BrowserRouter } from 'react-router-dom';
 
-register(ITZBund, defineCustomElements)
+register(DEFAULT, defineCustomElements)
   .then(() => {
     ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <React.StrictMode>
