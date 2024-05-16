@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/dashboard//*" element={<CustomerIndex />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/help" element={<HelpIndex />} />
+        <Route path="/help//*" element={<HelpIndex />} />
 
         <Route path="*" element={<h1>Seite nicht gefunden</h1>} />
       </Routes>
