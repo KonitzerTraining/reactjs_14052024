@@ -8,7 +8,6 @@ import { defineCustomElements } from "@public-ui/components/dist/loader";
 
 // @ts-expect-error
 import { DEFAULT } from "@public-ui/themes";
-import { BrowserRouter } from 'react-router-dom';
 
 register(DEFAULT, defineCustomElements)
   .then(() => {

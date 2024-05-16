@@ -3,7 +3,7 @@ import { Customer } from "../../../model/Customer";
 import { customerService } from "../../../services/customer.service";
 import { KolButton, KolTable } from "@public-ui/react";
 import { KoliBriTableDataType } from "@public-ui/components";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function CustomerList() {
     
