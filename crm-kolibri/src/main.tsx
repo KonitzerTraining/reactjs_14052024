@@ -5,6 +5,8 @@ import './index.css'
 
 import { register } from "@public-ui/components";
 import { defineCustomElements } from "@public-ui/components/dist/loader";
+
+// @ts-expect-error
 import { DEFAULT } from "@public-ui/themes";
 
 register(DEFAULT, defineCustomElements)

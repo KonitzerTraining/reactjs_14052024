@@ -1,12 +1,14 @@
-import React from 'react';
 import { KolSpin } from '@public-ui/react';
+import { StartPage } from './pages/start/StartPage';
 
 function App() {
 
 
   return (
     <>
-      <KolSpin _show />
+
+      <StartPage></StartPage>
+
     </>
   )
 }
