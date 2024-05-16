@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
 import { StartPage } from './pages/start/StartPage';
 import { HelpIndex } from './pages/help/HelpIndex';
 
@@ -8,32 +8,21 @@ import { MainNavigation } from './MainNavigation';
 
 function App() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <StartPage></StartPage>,
-      errorElement: <h1>Page Not Found</h1>
-    },
-    {
-      path: "/dashboard",
-      element: <CustomerIndex></CustomerIndex>,
-    },
-    {
-      path: "/about",
-      element: <AboutPage></AboutPage>,
-    },
-    {
-      path: "/help",
-      element: <HelpIndex></HelpIndex>,
-    },
-  ]);
 
   return (
-    <>
-      <MainNavigation></MainNavigation>
-      <RouterProvider router={router} />
-    </>
-  )
+    <BrowserRouter>
+      <MainNavigation />
+      
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+        <Route path="/dashboard" element={<CustomerIndex />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/help" element={<HelpIndex />} />
+
+        <Route path="*" element={<h1>Seite nicht gefunden</h1>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App

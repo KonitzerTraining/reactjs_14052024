@@ -8,13 +8,16 @@ import { defineCustomElements } from "@public-ui/components/dist/loader";
 
 // @ts-expect-error
 import { ITZBund } from "@public-ui/themes";
+import { BrowserRouter } from 'react-router-dom';
 
 register(ITZBund, defineCustomElements)
- .then(() => {
+  .then(() => {
     ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <React.StrictMode>
-        <App />
+
+          <App />
+
       </React.StrictMode>
     );
   })
- .catch(console.warn);
+  .catch(console.warn);
