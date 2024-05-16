@@ -3,8 +3,16 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import { register } from "@public-ui/components";
+import { defineCustomElements } from "@public-ui/components/dist/loader";
+import { DEFAULT } from "@public-ui/themes";
+
+register(DEFAULT, defineCustomElements)
+ .then(() => {
+    ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  })
+ .catch(console.warn);
