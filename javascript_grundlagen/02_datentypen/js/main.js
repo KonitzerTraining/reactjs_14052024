@@ -35,6 +35,15 @@ let templateLit = `
 console.log(templateLit);
 console.log(typeof templateLit);
 
+// Wrapper Type
+// In diesem Fall: String.prototype
+const textBaustein = 'Das ist ein Baustein';
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes?retiredLocale=de
+let r = textBaustein.includes('ist');
+console.log(r);
+
+
 
 
 /*

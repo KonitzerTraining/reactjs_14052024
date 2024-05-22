@@ -19,3 +19,5 @@ Alternativen von Mozilla und Microsoft
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript#tutorials
 - https://www.typescriptlang.org/docs/handbook/intro.html
 
+Methoden:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
