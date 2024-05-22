@@ -21,3 +21,24 @@ Alternativen von Mozilla und Microsoft
 
 Methoden:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+
+Build-Werkzeuge
+
+- https://vitejs.dev/guide/
+- https://webpack.js.org/
+
+- https://turbo.build/pack/docs
+
+## Einfaches Setup mit Vite 
+
+- Nodejs installieren https://nodejs.org/en
+
+```
+node -v
+npm create vite@latest demo-ts -- --template vanilla-ts
+cd demo-ts
+npm install
+npm run dev
+```
+
