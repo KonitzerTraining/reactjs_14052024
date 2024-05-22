@@ -46,11 +46,6 @@ console.log(r);
 
 
 
-/*
-
-
-
-
 
 // number
 // + -  * / % 
@@ -62,25 +57,34 @@ console.log(typeof result);
 result = 4 * 4;
 console.log(result, typeof result);
 
+let a = 5;
+a += 2;
+a++;
+console.log(a);
+
 result = 488574.234;
-result = result.toLocaleString('de-DE', {
+result = result.toLocaleString('de-De', {
     style: 'currency',
     currency: 'EUR'
 }); // de-CH
 
 console.log(result);
-console.log(Math.LN10);
 
-result = Math.cos(0.5);
+// Mathematische Funktionen
+console.log(Math.LN10); // Static Property
+
+result = Math.cos(0.5); // Methods von Math
 console.log(result);
 
 result = 'Kuchen' / 7;
+// isNaN um Operationen sicherer zu machen
 console.log(result, isNaN(result), typeof result); // Literalkonstante NaN
 
 // Typumwandlung
-let ageInputValue = '34.3'; // Zum Beispiel aus einem Formular
+let ageInputValue = 'a34.3'; // Zum Beispiel aus einem Formular
 console.log(ageInputValue, typeof ageInputValue);
 
+// Am häufigsten wirde der Vorzeichenoperator
 result = +ageInputValue; // Vorzeichenänderung bewirkt impliziter Cast
 console.log(result, typeof result);
 
@@ -89,6 +93,10 @@ console.log(result, typeof result);
 
 result = parseInt(ageInputValue, 16); // Erwartet Ganzzahl, Basis optional
 console.log(result, typeof result);
+
+
+/*
+
 
 // boolean
 // < > <= >= !== === 
