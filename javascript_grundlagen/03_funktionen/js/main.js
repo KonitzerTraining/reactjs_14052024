@@ -1,6 +1,5 @@
 let v = sum(4, 6);
 console.log(v);
-
 // Funktionsdefinition wird an den Anfang verschoben (Hoisting);
 function sum(a, b = 1) {
     if (a === void 0) {
@@ -9,10 +8,10 @@ function sum(a, b = 1) {
     return a + b;
 }
 
-// sum = undefined;
-
+// sum = undefined; 
+let result;
 try {
-    let result = sum();
+    result = sum();
     console.log(result);
 } catch (e) {
     console.warn(e);

@@ -4,6 +4,8 @@ console.log(typeof Object);
 
 // new erstellt einen neuen Kontext, Object veredelt diesen
 const simpleObject = new Object(); // unüblich
+
+// Erweitern eines Objekts
 simpleObject.color = 'green';
 console.log(simpleObject);
 console.log(typeof simpleObject);
@@ -12,9 +14,10 @@ const simpleList = new Array(); // unüblich
 console.log(simpleList);
 console.log(typeof simpleList);
 
+// Null ist nicht undefined
 console.log(null, typeof null);
 
-// object literal notation
+// Üblich: object literal notation
 const customer = { // besser als new Object()
     name: 'Tim',
     address: 'Main Street 3a'
@@ -40,7 +43,7 @@ record.forEach((el) => {
 /* function Car(c) {
     this.color = c;
 } */
-
+/*
 class Car {
     constructor(c) {
         this.color = c;
@@ -69,3 +72,4 @@ const dataRecord = [34, 'Headline', 'Tim Taler'];
 const [id, title, author] = dataRecord;
 
 console.log(author);
+*/
