@@ -9,6 +9,8 @@ function sum(a, b = 1) {
     return a + b;
 }
 
+// sum = undefined;
+
 try {
     let result = sum();
     console.log(result);
@@ -28,13 +30,13 @@ const compute = function (x = 1, y = 1) {
 console.log(compute(4, 5));
 console.log(compute(3));
 
-// Arrow-Funktion
+// Arrow-Funktion (arbeitet anders mit this)
 const arrowFunction = (a, b) => {
     return a + b;
-}
+};
 console.log(arrowFunction(3, 5))
 
-// Arror-Funktion in Short.
+// Arrow-Funktion in Short.
 const aFunc = (a, b) => a + b;
 console.log(aFunc(3, 5));
 
