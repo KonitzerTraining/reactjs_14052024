@@ -95,19 +95,18 @@ result = parseInt(ageInputValue, 16); // Erwartet Ganzzahl, Basis optional
 console.log(result, typeof result);
 
 
-/*
-
 
 // boolean
 // < > <= >= !== === 
 // bitte nicht verwenden: != ==
-console.log(1 == "1");
+console.log(1 == "1"); // Nicht Typsicher -> impliziter Cast
 console.log(1 === "1");
 
 // ! && || ?? 
 const inputValue = 30;
 result = inputValue > 21;
 console.log(result, typeof result);
+
 if(result) {
     console.log(inputValue + ' ist größer als 21');
 } // else {}
@@ -115,11 +114,13 @@ if(result) {
 result = (1 < 2) ? 'A': 'B';
 console.log(result);
 
+
 // undefined
-let temp;
+// void
+let temp; // default-Wert ist undefined
 console.log(temp, typeof temp);
 
-temp = undefined;
+temp = undefined; // Literalkonstante undefined
 console.log(temp, typeof temp);
 
 temp = void 0; // übliche Notation
@@ -131,4 +132,3 @@ if(input === void 0) {
     console.warn('Eingabe ungültig');
 }
 
-*/
