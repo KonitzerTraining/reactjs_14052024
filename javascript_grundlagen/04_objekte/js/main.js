@@ -40,10 +40,11 @@ record.forEach((el) => {
     console.log(el);
 })
 
-/* function Car(c) {
+/* 
+function Car(c) {
     this.color = c;
-} */
-/*
+}  */
+
 class Car {
     constructor(c) {
         this.color = c;
@@ -57,12 +58,18 @@ console.log(myCar);
 // dekonstruktion
 const modul = {
     info: '3.5.4',
-    helperFunction() {
+    helperFunction() { // helperFunction: function () {}
         console.log('ok');
     }
 }
 
 modul.helperFunction();
+
+// jeder Eigenschaft des Objekts wird zu einer Konstante
+//
+const info = 'test';
+
+// da info schon existiert, wird ein Alias verwendet
 const { helperFunction, info: modulInfo } = modul;
 helperFunction();
 console.log(modulInfo);
@@ -72,4 +79,3 @@ const dataRecord = [34, 'Headline', 'Tim Taler'];
 const [id, title, author] = dataRecord;
 
 console.log(author);
-*/
