@@ -1,0 +1,1 @@
+export const infoText = 'Das ist aus einer externen Datei';

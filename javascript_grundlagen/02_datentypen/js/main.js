@@ -1,8 +1,10 @@
 /**
  * Datentypen in ECMAScript / JavaScript
  * 
+ * Einfache Datentypen
  * string, number, boolean, undefined, symbol, BigInt
  * 
+ * Referenztypen
  * function, object
  * 
  * Operator zur Typermittlung: typeof
@@ -32,6 +34,14 @@ let templateLit = `
 
 console.log(templateLit);
 console.log(typeof templateLit);
+
+
+
+/*
+
+
+
+
 
 // number
 // + -  * / % 
@@ -104,3 +114,4 @@ if(input === void 0) {
     console.warn('Eingabe ungültig');
 }
 
+*/

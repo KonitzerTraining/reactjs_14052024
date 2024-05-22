@@ -5,6 +5,8 @@
 
 ## Ressourcen 
 
+https://ecma-international.org/publications-and-standards/standards/ecma-262/
+
 Tutorials von w3schools
 - https://www.w3schools.com/html/default.asp
 - https://www.w3schools.com/js/default.asp

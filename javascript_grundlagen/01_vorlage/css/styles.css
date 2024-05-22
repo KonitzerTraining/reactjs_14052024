@@ -1,9 +1,13 @@
 /*
-Selector {
-    property: value;
-}
+    Selector {
+        property: value;
+    } 
 */
 
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-weight: normal;
 }
