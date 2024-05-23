@@ -1,5 +1,5 @@
 let num1 = 200; // implizite Typisierung
-num1 = '200';
+// num1 = '200';
 console.log(num1);
 
 // Zustand wie in JavaScript
@@ -10,7 +10,7 @@ num2 = '200';
 
 let surname: string = 'Taylor';
 
-let names: string[] = ['a', 3453];
+let names: string[] = ['a', /* 3453 */];
 
 // Auswahl unter verschiedenen Typen
 let id: string | number = 3;

@@ -76,3 +76,100 @@ npm run dev
 
 Zusammengefasst: Node.js und npm bilden die Grundlage für die Installation und Verwaltung von JavaScript-Tools. Vite und Webpack sind wichtige Build-Tools, die die Entwicklung und Optimierung von Webanwendungen erleichtern. React und TypeScript sind moderne Technologien, die oft zusammen verwendet werden, um leistungsfähige und skalierbare Webanwendungen zu erstellen.
 
+## npm Befehle
+
+Hier sind einige typische npm-Befehle mit kurzer Erklärung:
+
+1. **`npm init`**:
+   Erstellt eine neue `package.json` Datei, die grundlegende Informationen über das Projekt enthält und Abhängigkeiten verwaltet.
+   
+   ```sh
+   npm init
+   ```
+
+2. **`npm install`** oder **`npm i`**:
+   Installiert alle im `package.json` angegebenen Abhängigkeiten in das `node_modules` Verzeichnis.
+
+   ```sh
+   npm install
+   npm i
+   ```
+
+3. **`npm install <package>`**:
+   Installiert ein bestimmtes Paket und fügt es als Abhängigkeit in der `package.json` hinzu. Mit dem Flag `--save` wird es zu den Produktionsabhängigkeiten (`dependencies`), und mit `--save-dev` zu den Entwicklungsabhängigkeiten (`devDependencies`) hinzugefügt.
+
+   ```sh
+   npm install <package>
+   npm install <package> --save
+   npm install <package> --save-dev
+   ```
+
+4. **`npm update`**:
+   Aktualisiert alle Pakete im `node_modules` Verzeichnis auf ihre neuesten Versionen, die mit den Semver-Bereichen in der `package.json` Datei kompatibel sind.
+
+   ```sh
+   npm update
+   ```
+
+5. **`npm uninstall <package>`** oder **`npm remove <package>`**:
+   Entfernt ein Paket aus dem `node_modules` Verzeichnis und aktualisiert die `package.json` Datei entsprechend.
+
+   ```sh
+   npm uninstall <package>
+   npm remove <package>
+   ```
+
+6. **`npm run <script>`**:
+   Führt ein im `scripts` Abschnitt der `package.json` definiertes Skript aus. Zum Beispiel kann `npm start` das `start` Skript ausführen.
+
+   ```sh
+   npm run <script>
+   npm run start
+   ```
+
+7. **`npm list`** oder **`npm ls`**:
+   Listet die installierten Pakete und ihre Abhängigkeiten auf.
+
+   ```sh
+   npm list
+   npm ls
+   ```
+
+8. **`npm audit`**:
+   Führt eine Sicherheitsüberprüfung der installierten Pakete durch und listet potenzielle Sicherheitslücken auf.
+
+   ```sh
+   npm audit
+   ```
+
+9. **`npm audit fix`**:
+   Versucht automatisch, gefundene Sicherheitslücken zu beheben, indem die betroffenen Pakete aktualisiert werden.
+
+   ```sh
+   npm audit fix
+   ```
+
+10. **`npm cache clean --force`**:
+    Löscht den npm-Cache, um Platz zu schaffen oder bei Cache-Problemen zu helfen.
+
+    ```sh
+    npm cache clean --force
+    ```
+
+11. **`npm outdated`**:
+    Zeigt eine Liste der installierten Pakete, die veraltet sind und eine neuere Version verfügbar haben.
+
+    ```sh
+    npm outdated
+    ```
+
+12. **`npm version <update_type>`**:
+    Erhöht die Version des Projekts basierend auf den Semver-Konventionen (`patch`, `minor`, `major`) und aktualisiert die `package.json`.
+
+    ```sh
+    npm version patch
+    npm version minor
+    npm version major
+    ```
+
+Diese Befehle sind die Grundlage für die Arbeit mit npm und decken die häufigsten Aufgaben in der Paketverwaltung und Projektverwaltung ab.
