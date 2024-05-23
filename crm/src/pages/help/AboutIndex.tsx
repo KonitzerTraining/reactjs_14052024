@@ -1,16 +1,32 @@
+import { useEffect, useState } from "react";
 import { helpService } from "../../services/help.service"
+import type { HelpArticle } from "../../model/HelpArticle"
 
-export function HelpIndex () {
+export function HelpIndex() {
+    console.log('test');
+    const [articles, setArticles] = useState<HelpArticle[]>([]);
 
-    helpService.getAll().then((articles) => {
-        console.log(articles);
-    });
-
+    useEffect(() => {
+        helpService.getAll().then((articles) => {
+            setArticles(articles);
+        });
+    }, []);
 
     return (
         <>
             <h1>Help</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt atque, hic aspernatur laborum optio molestias excepturi sint id tempore minima. Porro tempore repudiandae corporis reprehenderit laudantium sapiente fugit, numquam deserunt.</p>
+            {/* {JSON.stringify(articles)} */}
+
+
+            {articles.map((article) => {
+                return (
+                    <article key={article.id}>
+                        <h3>{article.topic}</h3>
+                        <p>{article.content}</p>
+                    </article>
+                )
+            })}
+
         </>
     )
 }
