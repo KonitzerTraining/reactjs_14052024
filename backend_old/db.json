@@ -1,0 +1,14 @@
+{
+  "customers":[
+    {
+        "id": 3,
+        "name": "Tim",
+        "credit": 200
+    },
+    {
+        "id": 4,
+        "name": "Tom",
+        "credit": 500
+    }
+]
+}

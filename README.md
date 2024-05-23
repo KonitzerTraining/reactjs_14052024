@@ -173,3 +173,27 @@ Hier sind einige typische npm-Befehle mit kurzer Erklärung:
     ```
 
 Diese Befehle sind die Grundlage für die Arbeit mit npm und decken die häufigsten Aufgaben in der Paketverwaltung und Projektverwaltung ab.
+
+## Mock Backend mit Markdown
+
+```
+mkdir backend
+cd backend
+npm init -y
+npm install json-server@0.17.4
+```
+
+package.json 
+
+```
+  "private": true,
+  "scripts": {
+    "start": "json-server -w db.json -d 700 -p 3002"
+  },
+```
+
+Server starten
+
+```
+npm start
+```
