@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { StartPage } from './pages/start/StartPage';
 import { AboutPage } from './pages/legal/AboutPage';
-import { HelpIndex } from './pages/help/AboutIndex';
+import { HelpIndex } from './pages/help/HelpIndex';
 import { MainNavigation } from './MainNavigation';
 
 function App() {
