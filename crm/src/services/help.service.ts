@@ -22,4 +22,8 @@ export function useHelpArticles() {
   }, []);
 
   return articles;
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> fbfb9aec66551a882fb8b37a13629af2a6dc9c76
