@@ -22,4 +22,4 @@ export function useHelpArticles() {
   }, []);
 
   return articles;
-}
+} 
