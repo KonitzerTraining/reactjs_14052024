@@ -1,4 +1,12 @@
+import { helpService } from "../../services/help.service"
+
 export function HelpIndex () {
+
+    helpService.getAll().then((articles) => {
+        console.log(articles);
+    });
+
+
     return (
         <>
             <h1>Help</h1>

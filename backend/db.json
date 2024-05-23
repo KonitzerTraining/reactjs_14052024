@@ -1,4 +1,16 @@
 {
+  "help": [
+    {
+      "id": 1,
+      "topic": "Wie lege ich einen neuen Kunden an?",
+      "content": "Gehen Sie zum Dashboard"
+    },
+    {
+      "id": 2,
+      "topic": "Wie lösche ich einen Kunden?",
+      "content": "Gehen Sie zum Dashboard..."
+    }
+  ],
   "customers": [
     {
       "id": 3,
