@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { CONFIG } from "../CONFIG";
 import { Customer } from "../model/Customer";
 
@@ -18,3 +19,16 @@ export const customerService = {
         return response.json();
     }
 }
+
+export function useCustomers() {
+    const [customers, setCustomers] = useState<Customer[]>([]);
+  
+    useEffect(() => {
+        customerService.getAll().then((customers) => {
+            setCustomers(customers);
+        });
+    }, []);
+  
+    return customers;
+  } 
+  
