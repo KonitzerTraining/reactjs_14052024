@@ -8,7 +8,6 @@ import { CustomersIndex } from './features/customers/CustomersIndex';
 
 function App() {
 
-
   // jsx / tsx-Code
   return (
     <>
@@ -16,7 +15,7 @@ function App() {
      <MainNavigation></MainNavigation>
       <Routes>
         <Route path='/' element={<StartPage></StartPage>}></Route>
-        <Route path='/dashboard' element={<CustomersIndex></CustomersIndex>}></Route>
+        <Route path='/dashboard//*' element={<CustomersIndex></CustomersIndex>}></Route>
         <Route path='/about' element={<AboutPage></AboutPage>}></Route>
         <Route path='/help' element={<HelpIndex></HelpIndex>}></Route>
       </Routes>

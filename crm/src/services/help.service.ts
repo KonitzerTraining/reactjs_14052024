@@ -5,7 +5,7 @@ import { HelpArticle } from "../model/HelpArticle";
 const url = CONFIG.api + 'help';
 
 export const helpService = {
-    async getAll() {
+    async getAll(): Promise<HelpArticle[]> {
       const response = await fetch(url);
       return response.json();
     }
