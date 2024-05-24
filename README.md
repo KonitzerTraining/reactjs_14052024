@@ -28,7 +28,12 @@ Build-Werkzeuge
 - https://vitejs.dev/guide/
 - https://webpack.js.org/
 
-- https://turbo.build/pack/docs
+- [text](https://turbo.build/pack/docs)
+
+React 
+
+- [reactjs.dev](https://react.dev/)
+- [text](https://nextjs.org/)
 
 ## Einfaches Setup mit Vite 
 
