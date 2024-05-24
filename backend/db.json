@@ -24,13 +24,33 @@
     },
     {
       "id": 6,
-      "name": "Lee",
+      "name": "Lee 2",
       "credit": 300
     },
     {
       "name": "Pete",
       "credit": 3000,
       "id": 7
+    },
+    {
+      "name": "test",
+      "credit": 0,
+      "id": 9
+    },
+    {
+      "name": "Peter",
+      "credit": 304,
+      "id": 10
+    },
+    {
+      "credit": 34,
+      "name": "neu",
+      "id": 11
+    },
+    {
+      "credit": 3,
+      "name": "Peter D.",
+      "id": 12
     }
   ]
 }

@@ -1,5 +1,5 @@
 export interface Customer {
-    id: number
+    id: number | null
     name: string
     credit: number
 }
