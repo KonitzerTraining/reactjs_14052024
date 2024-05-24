@@ -10,7 +10,7 @@ export function CustomersIndex () {
             <Routes>
             <Route path='' element={<CustomerList></CustomerList>}></Route>
             <Route path='new' element={<CustomerNew></CustomerNew>}></Route>
-            <Route path='edit' element={<CustomerEdit></CustomerEdit>}></Route>
+            <Route path='edit/:id' element={<CustomerEdit></CustomerEdit>}></Route>
             </Routes>
         </>
     )

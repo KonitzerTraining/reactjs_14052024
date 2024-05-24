@@ -36,7 +36,9 @@ export function CustomerList() {
                                     <span>&nbsp;</span>
                                     <KolButton
                                         _label="Edit"
-                                        _on={{ onClick: editButtonHandler }}></KolButton >
+                                        _on={{ onClick: () => {
+                                            editButtonHandler(cell.data.id);
+                                        } }}></KolButton >
                                 </>
                             )
                     }
@@ -50,8 +52,10 @@ export function CustomerList() {
         navigate('/dashboard/new');
     }
 
-    const editButtonHandler = () => {
-        console.log('edit')
+    const editButtonHandler = (id: number) => {
+        navigate( {
+            pathname : '/dashboard/edit/' + id,
+        });
     }
 
     const deleteButtonHandler = (id: number) => {
