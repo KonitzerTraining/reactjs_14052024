@@ -14,11 +14,19 @@ export function CustomerList() {
                 { label: 'Name', key: 'name' },
                 { label: 'Credit', key: 'credit', textAlign: "right"},
                 {
-                    label: '', key: 'id', textAlign: 'right',
+                    label: '', key: 'id', 
+                    textAlign: 'right',
+                   
                     render(el: HTMLElement, cell: any) {
                         createRoot(createReactRenderElement(el))
                             .render(
                                 <>
+                                
+                                    <KolButton 
+                                        _label="Delete" 
+                                        _variant="danger"
+                                        ></KolButton>
+                                        <span>&nbsp;</span>
                                     <KolButton _label="Edit" ></KolButton >
                                 </>
                             )
@@ -32,6 +40,10 @@ export function CustomerList() {
         <>
             <h2>Customer List</h2>
             {/* {JSON.stringify(customers)} */}
+            <div className="d-flex justify-content-between">
+                <KolButton _label="New"></KolButton>
+                <KolButton _label="Refresh"></KolButton>
+            </div>
 
             <KolTable
                 _data={customers as unknown as KoliBriTableDataType[]}

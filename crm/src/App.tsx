@@ -11,15 +11,17 @@ function App() {
   // jsx / tsx-Code
   return (
     <>
-     <BrowserRouter>
-     <MainNavigation></MainNavigation>
-      <Routes>
-        <Route path='/' element={<StartPage></StartPage>}></Route>
-        <Route path='/dashboard//*' element={<CustomersIndex></CustomersIndex>}></Route>
-        <Route path='/about' element={<AboutPage></AboutPage>}></Route>
-        <Route path='/help' element={<HelpIndex></HelpIndex>}></Route>
-      </Routes>
-     </BrowserRouter>
+      <BrowserRouter>
+        <div className="container">
+          <MainNavigation></MainNavigation>
+          <Routes>
+            <Route path='/' element={<StartPage></StartPage>}></Route>
+            <Route path='/dashboard//*' element={<CustomersIndex></CustomersIndex>}></Route>
+            <Route path='/about' element={<AboutPage></AboutPage>}></Route>
+            <Route path='/help' element={<HelpIndex></HelpIndex>}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   )
 }
