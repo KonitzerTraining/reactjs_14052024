@@ -1,15 +1,7 @@
 import { KolButton, KolTable, createReactRenderElement } from "@public-ui/react";
 import { useCustomers } from "../../../services/customer.service"
 import { KoliBriTableDataType } from "@public-ui/components";
-import { createRoot, Root } from 'react-dom/client';
-/* 
-const REACT18_ROOTS = new WeakMap<Element | DocumentFragment, Root>();
-export const getRoot = (el: Element | DocumentFragment): Root => {
-    if (REACT18_ROOTS.has(el) === false) {
-        REACT18_ROOTS.set(el, createRoot(el));
-    }
-    return REACT18_ROOTS.get(el) as Root;
-}; */
+import { createRoot } from 'react-dom/client';
 
 
 export function CustomerList() {
@@ -20,9 +12,9 @@ export function CustomerList() {
             [
                 { label: '#', key: 'id' },
                 { label: 'Name', key: 'name' },
-                { label: 'Credit', key: 'credit' },
+                { label: 'Credit', key: 'credit', textAlign: "right"},
                 {
-                    label: '', key: 'id',
+                    label: '', key: 'id', textAlign: 'right',
                     render(el: HTMLElement, cell: any) {
                         createRoot(createReactRenderElement(el))
                             .render(
