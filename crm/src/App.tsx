@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { StartPage } from './pages/start/StartPage';
-import { AboutPage } from './pages/legal/AboutPage';
-import { HelpIndex } from './pages/help/HelpIndex';
+import { StartPage } from './features/start/StartPage';
+import { AboutPage } from './features/legal/AboutPage';
+import { HelpIndex } from './features/help/HelpIndex';
 import { MainNavigation } from './MainNavigation';
 
 function App() {
