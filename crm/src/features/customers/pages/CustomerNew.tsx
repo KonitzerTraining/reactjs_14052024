@@ -8,13 +8,25 @@ export function CustomerNew() {
         credit: 0
     })
 
-    const formSubmitHandler = (event: FormEvent) => {
+    const formSubmitHandler = () => {
         //event.preventDefault();
-        console.log(event);
+        console.log(customer);
     }
 
-    const handleInputChange = (e) => {
-        console.log(e.target.value);
+    const handleInputChange = (e: any) => {
+        let value = e.target.value;
+        const prop = e.target.id;
+
+        if(prop === 'credit') {
+            value = +value;
+        }
+
+        const newCustomer = {
+          ...customer, // Spread-Operator
+          [prop]: value
+        }
+
+        setCustomer(newCustomer);
     }
 
     return (
@@ -27,12 +39,12 @@ export function CustomerNew() {
             }}>
 
                 <div className="mb-3">
-                    <KolInputText _label="Name" _value="test" _on={{
+                    <KolInputText _label="Name" _value={customer.name} _id="name" _on={{
                         onInput: handleInputChange
                     }}></KolInputText>
             </div>
             <div className="mb-3">
-                <KolInputNumber _label="Credit" _value={0} _on={{
+                <KolInputNumber _label="Credit" _value={customer.credit} _id="credit" _on={{
                         onInput: handleInputChange
                     }}></KolInputNumber>
             </div>
