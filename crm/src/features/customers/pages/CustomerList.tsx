@@ -62,7 +62,7 @@ export function CustomerList() {
     }
 
     const refreshButtonHandler = () => {
-        console.log('delete')
+        loadCustomers();
     }
 
     return (
