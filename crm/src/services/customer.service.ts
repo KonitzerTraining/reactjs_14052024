@@ -33,7 +33,7 @@ export function useCustomers() {
     }, []);
   
     return {
-        data: customers,
+        customers,
         loadCustomers
     };
   } 

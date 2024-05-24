@@ -18,11 +18,6 @@
       "credit": 300
     },
     {
-      "id": 4,
-      "name": "Matt",
-      "credit": 120
-    },
-    {
       "id": 5,
       "name": "Roy",
       "credit": 50
@@ -31,11 +26,6 @@
       "id": 6,
       "name": "Lee",
       "credit": 300
-    },
-    {
-      "name": "Tom",
-      "credit": 0,
-      "id": 8
     }
   ]
 }

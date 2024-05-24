@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export function CustomerList() {
     const navigate = useNavigate();
-    const customersHook = useCustomers();
+    const { customers, loadCustomers } = useCustomers();
     const headers = {
         horizontal: [
             [
@@ -28,7 +28,8 @@ export function CustomerList() {
                                         _variant="danger"
                                         _on={{
                                             onClick: () => {
-                                                deleteButtonHandler(cell.label);
+                                                console.log(cell);
+                                                deleteButtonHandler(cell.data.id);
                                             }
                                         }}
                                     ></KolButton>
@@ -56,7 +57,7 @@ export function CustomerList() {
     const deleteButtonHandler = (id: number) => {
         console.log('delete', id)
         customerService.deleteById(id).then(() => {
-            customersHook.loadCustomers();
+           loadCustomers();
         })
     }
 
@@ -81,7 +82,7 @@ export function CustomerList() {
             </div>
 
             <KolTable
-                _data={customersHook.data as unknown as KoliBriTableDataType[]}
+                _data={customers as unknown as KoliBriTableDataType[]}
                 _headers={headers}
                 _label="Kundenliste"
             ></KolTable>
