@@ -26,6 +26,11 @@
       "id": 6,
       "name": "Lee",
       "credit": 300
+    },
+    {
+      "name": "Pete",
+      "credit": 3000,
+      "id": 7
     }
   ]
 }

@@ -17,6 +17,17 @@ export const customerService = {
             }
         );
         return response.json();
+    },
+    async post(customer: Omit<Customer, 'id'>): Promise<Customer> {
+        const response = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(customer),
+            headers: {
+                "Content-Type": "application/json",
+              },
+        });
+
+        return response.json();
     }
 }
 

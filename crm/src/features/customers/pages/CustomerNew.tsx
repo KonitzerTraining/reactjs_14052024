@@ -1,8 +1,11 @@
 import { KolButton, KolForm, KolInputNumber, KolInputText } from "@public-ui/react"
 import { FormEvent, useState } from "react";
+import { customerService } from "../../../services/customer.service";
+import { useNavigate } from "react-router-dom";
 
 export function CustomerNew() {
 
+    const navigate = useNavigate();
     const [customer, setCustomer] = useState({
         name: '',
         credit: 0
@@ -10,7 +13,10 @@ export function CustomerNew() {
 
     const formSubmitHandler = () => {
         //event.preventDefault();
-        console.log(customer);
+        customerService.post(customer).then((newCustomer) => {
+            console.log(newCustomer);
+            navigate('/dashboard')
+        });
     }
 
     const handleInputChange = (e: any) => {
@@ -31,8 +37,6 @@ export function CustomerNew() {
 
     return (
         <>
-
-
             <h2>New Customer</h2>
             <KolForm _requiredText="Sternchen heißt Pflichtfeld." _on={{
                 onSubmit: formSubmitHandler
