@@ -22,13 +22,19 @@ export const customerService = {
 
 export function useCustomers() {
     const [customers, setCustomers] = useState<Customer[]>([]);
-  
-    useEffect(() => {
+    const loadCustomers = () => {
         customerService.getAll().then((customers) => {
             setCustomers(customers);
         });
+    }
+
+    useEffect(() => {
+        loadCustomers()
     }, []);
   
-    return customers;
+    return {
+        data: customers,
+        loadCustomers
+    };
   } 
   

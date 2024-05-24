@@ -1,5 +1,5 @@
 import { KolButton, KolTable, createReactRenderElement } from "@public-ui/react";
-import { useCustomers } from "../../../services/customer.service"
+import { customerService, useCustomers } from "../../../services/customer.service"
 import { KoliBriTableDataType } from "@public-ui/components";
 import { createRoot } from 'react-dom/client';
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export function CustomerList() {
     const navigate = useNavigate();
-    const customers = useCustomers();
+    const customersHook = useCustomers();
     const headers = {
         horizontal: [
             [
@@ -27,7 +27,9 @@ export function CustomerList() {
                                         _label="Delete"
                                         _variant="danger"
                                         _on={{
-                                            onClick: deleteButtonHandler
+                                            onClick: () => {
+                                                deleteButtonHandler(cell.label);
+                                            }
                                         }}
                                     ></KolButton>
                                     <span>&nbsp;</span>
@@ -51,8 +53,11 @@ export function CustomerList() {
         console.log('edit')
     }
 
-    const deleteButtonHandler = () => {
-        console.log('delete')
+    const deleteButtonHandler = (id: number) => {
+        console.log('delete', id)
+        customerService.deleteById(id).then(() => {
+            customersHook.loadCustomers();
+        })
     }
 
     const refreshButtonHandler = () => {
@@ -76,7 +81,7 @@ export function CustomerList() {
             </div>
 
             <KolTable
-                _data={customers as unknown as KoliBriTableDataType[]}
+                _data={customersHook.data as unknown as KoliBriTableDataType[]}
                 _headers={headers}
                 _label="Kundenliste"
             ></KolTable>
