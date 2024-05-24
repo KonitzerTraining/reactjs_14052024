@@ -4,6 +4,8 @@ import App from './App.tsx'
 
 import { register } from "@public-ui/components";
 import { defineCustomElements } from "@public-ui/components/dist/loader";
+
+//@ts-expect-error Missing d.ts file
 import { DEFAULT } from "@public-ui/themes";
 
 register(DEFAULT, defineCustomElements)
